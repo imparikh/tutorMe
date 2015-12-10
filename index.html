@@ -17,116 +17,209 @@
     <link rel="stylesheet" href="css/grid.css">
 
     <link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.min.css">
     <link rel="stylesheet" href="css/trial.css">
     <script>
         function resumeGetter() {
             document.getElementById("resumeInput").click()
-            var x = document.getElementById("resumeInput").name;
+
+        }
+
+        function change() {
+            var x = document.getElementById("resumeInput").value;
             document.getElementById("resumeFilename").innerHTML = x;
+            console.log(x + ' <-- name of file');
+            //trim x
+
         }
     </script>
     <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 </head>
 
 <body>
-    <div class="whiteRect">
-        <div class="container_12">
-            <form>
-                <div class="prefix_1 grid_11">
-                    <h3>First things first</h3>
-                </div>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
 
-                <div class="formrow ">
-                    <div class="formgroup grid_6 prefix_1">
-                        <label for="name">NAME</label>
-                        <input type="text" name="name">
-                    </div>
-                    <div class="formgroup grid_1 prefix_1">
-                        <label for="sex">SEX</label>
-                        <input type="text" name="sex">
-                    </div>
-                    <div class="formgroup grid_1 prefix_1">
-                        <label for="age">AGE</label>
-                        <input type="number" name="age">
-                    </div>
-                </div>
-
-                <div class="clear"></div>
-
-                <div class="formrow break">
-                    <div class="formgroup grid_6 prefix_1">
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="email">
-                    </div>
-                    <div class="formgroup grid_3 prefix_1">
-                        <label for="resume">RESUME</label>
-                        <div class="clear"></div>
-                        <div class="buttonandtext">
-
-                            <div class="btn submitButton" onclick="resumeGetter()">
-                                <div class="fa fa-paperclip"></div>
+            <div class="swiper-slide">
+                <div class="whiteRect">
+                    <div class="container_12">
+                        <form>
+                            <div class="prefix_1 grid_11">
+                                <h3>First things first</h3>
                             </div>
 
-                            <div id="resumeFilename">
-                                attach your resume
-                            </div>
-
-                            <input type="file" name="example.pdf" style="display:none" id="resumeInput">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="clear"></div>
-
-
-                <div class="formrow break">
-                    <div class="formgroup grid_6 prefix_1">
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="number" name="phone">
-                    </div>
-                    <div class="formgroup grid_3 prefix_1">
-                        <label for="zip">ZIPCODE</label>
-                        <input type="number" name="zip">
-                    </div>
-
-                </div>
-
-
-
-                <div class="clear"></div>
-                <div class="formrow breakMid">
-                    <div class="formgroup grid_2 prefix_1">
-
-                        <div class="btn transitionButton">
-                            <div style="line-height:49px">
-                                back
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="formgroup grid_2 prefix_6">
-                        <a href="next.html">
-                            <div class="btn transitionButton">
-                                <div style="line-height:49px">
-                                    next
+                            <div class="formrow ">
+                                <div class="formgroup grid_6 prefix_1">
+                                    <label for="name">NAME</label>
+                                    <input type="text" name="name">
+                                </div>
+                                <div class="formgroup grid_1 prefix_1">
+                                    <label for="sex">SEX</label>
+                                    <input type="text" name="sex">
+                                </div>
+                                <div class="formgroup grid_1 prefix_1">
+                                    <label for="age">AGE</label>
+                                    <input type="number" name="age">
                                 </div>
                             </div>
-                        </a>
+
+                            <div class="clear"></div>
+
+                            <div class="formrow break">
+                                <div class="formgroup grid_6 prefix_1">
+                                    <label for="email">EMAIL</label>
+                                    <input type="email" name="email">
+                                </div>
+                                <div class="formgroup grid_3 prefix_1">
+                                    <label for="resume">RESUME</label>
+                                    <div class="clear"></div>
+                                    <div class="buttonandtext">
+
+                                        <div class="btn submitButton" onclick="resumeGetter()">
+                                            <div class="fa fa-paperclip"></div>
+                                        </div>
+
+                                        <div id="resumeFilename">
+                                            attach your resume
+                                        </div>
+
+                                        <input type="file" onchange="change()" name="example.pdf" style="display:none" id="resumeInput">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clear"></div>
+
+
+                            <div class="formrow break">
+                                <div class="formgroup grid_10 prefix_1">
+                                    <label for="password">PASSWORD</label>
+                                    <input type="password" name="password">
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="clear"></div>
+                            <div class="formrow breakMid">
+                                <div class="formgroup grid_2 prefix_1">
+                                    <div class="btn transitionButton">
+                                        back
+                                    </div>
+                                </div>
+
+                                <div class="formgroup grid_2 prefix_6">
+                                    <div class="btn transitionButton swiper-button-next">
+                                        next
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </form>
+            </div>
 
+
+
+
+
+            <div class="swiper-slide">
+                <div class="whiteRect">
+                    <div class="container_12">
+                        <form>
+                            <div class="prefix_1 grid_11">
+                                <h3>Let's get personal</h3>
+                            </div>
+
+                            <div class="formrow ">
+                                <div class="formgroup grid_10 prefix_1">
+                                    <label for="hsname">HIGH SCHOOL</label>
+                                    <input type="text" name="hsname">
+                                </div>
+                            </div>
+
+                            <div class="clear"></div>
+
+                            <div class="formrow break">
+                                <div class="formgroup grid_2 prefix_1">
+                                    <label for="grade">GRADE</label>
+                                    <input type="number" name="grade">
+                                </div>
+                                <div class="formgroup grid_3 prefix_1">
+                                    <label for="UWGPA">UNWEIGHTED GPA</label>
+                                    <input type="number" name="UWGPA">
+                                </div>
+                                <div class="formgroup grid_3 prefix_1">
+                                    <label for="WGPA">WEIGHTED GPA</label>
+                                    <input type="number" name="WGPA">
+                                </div>
+
+                            </div>
+
+                            <div class="clear"></div>
+
+
+                            <div class="formrow break">
+                                <div class="formgroup grid_6 prefix_1">
+                                    <label for="phone">PHONE NUMBER</label>
+                                    <input type="number" name="phone">
+                                </div>
+                                <div class="formgroup grid_3 prefix_1">
+                                    <label for="zip">ZIPCODE</label>
+                                    <input type="number" name="zip">
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="clear"></div>
+                            <div class="formrow breakMid">
+                                <div class="formgroup grid_2 prefix_1">
+                                    <div class="btn transitionButton swiper-button-prev">
+                                        <div style="line-height:49px">
+                                            back
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="formgroup grid_2 prefix_6">
+                                    <div class="btn transitionButton swiper-button-next">
+                                        <div style="line-height:49px">
+                                            next
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-
+    <script src="bower_components/Swiper/dist/js/swiper.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')
     </script>
     <script src="js/main.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
 
+            // Navigation arrows
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+
+        })
+    </script>
 </body>
 
 </html>
