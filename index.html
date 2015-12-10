@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>TutorMe</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/960_12_col.css">
+    <link rel="stylesheet" href="css/grid.css">
+
+    <link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/trial.css">
+    <script>
+        function resumeGetter() {
+            document.getElementById("resumeInput").click()
+            var x = document.getElementById("resumeInput").name;
+            document.getElementById("resumeFilename").innerHTML = x;
+        }
+    </script>
+    <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+</head>
+
+<body>
+    <div class="whiteRect">
+        <div class="container_12">
+            <form>
+                <div class="prefix_1 grid_11">
+                    <h3>First things first</h3>
+                </div>
+
+                <div class="formrow ">
+                    <div class="formgroup grid_6 prefix_1">
+                        <label for="name">NAME</label>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="formgroup grid_1 prefix_1">
+                        <label for="sex">SEX</label>
+                        <input type="text" name="sex">
+                    </div>
+                    <div class="formgroup grid_1 prefix_1">
+                        <label for="age">AGE</label>
+                        <input type="number" name="age">
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="formrow break">
+                    <div class="formgroup grid_6 prefix_1">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="formgroup grid_3 prefix_1">
+                        <label for="resume">RESUME</label>
+                        <div class="clear"></div>
+                        <div class="buttonandtext">
+
+                            <div class="btn submitButton" onclick="resumeGetter()">
+                                <div class="fa fa-paperclip"></div>
+                            </div>
+
+                            <div id="resumeFilename">
+                                attach your resume
+                            </div>
+
+                            <input type="file" name="example.pdf" style="display:none" id="resumeInput">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+
+                <div class="formrow break">
+                    <div class="formgroup grid_6 prefix_1">
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="number" name="phone">
+                    </div>
+                    <div class="formgroup grid_3 prefix_1">
+                        <label for="zip">ZIPCODE</label>
+                        <input type="number" name="zip">
+                    </div>
+
+                </div>
+
+
+
+                <div class="clear"></div>
+                <div class="formrow breakMid">
+                    <div class="formgroup grid_2 prefix_1">
+
+                        <div class="btn transitionButton">
+                            <div style="line-height:49px">
+                                back
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formgroup grid_2 prefix_6">
+                        <a href="next.html">
+                            <div class="btn transitionButton">
+                                <div style="line-height:49px">
+                                    next
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')
+    </script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
